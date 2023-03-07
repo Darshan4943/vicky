@@ -1,5 +1,8 @@
-export default function Head3(){
-    return(
-    <h3> I am Heading three...from third component</h3>
-    )
-  }
+
+export default function Head_three(props) {
+  return (
+    <>
+       <button> {props.btn}</button>
+    </>
+  )
+}

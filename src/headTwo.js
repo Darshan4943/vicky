@@ -1,5 +1,12 @@
 export default function Head2(){
     return(
-    <h2> I am Heading two...from second component</h2>
-    )
-}
+        <>
+        
+        <input type="text" placeholder="mobile ..." /> 
+        <br/>
+       
+         <input type="text" placeholder="password ..." /> 
+         <br/>
+       </>
+   )
+    }
