@@ -1,17 +1,18 @@
 
-import './App.css' 
-import Head1 from './headOne'
-import Head2 from './headTwo'
-import Head3 from './headThree'
+
+import Card from "./card"
+
+
 
  
 export default function App(){
   return(
-    <div className='container'>
-      <Head1 data="Register here ..."/>
-      <Head2 />
-      <Head3 btn="Submit"/>
-    </div> 
+    < Card name="Amit"
+    designation= "Graphic Designer"
+    description= "Highly creative and multitalented Graphic Designer with extensive experience in multimedia, marketing, and print design."
+ 
+    />
+
     
-  )
+    )
 }
