@@ -1,17 +1,33 @@
+import React, { Fragment,useState} from 'react'
 
-
-import Card from "./card"
-
-
-
- 
+import './App.css'
 export default function App(){
+
+  const [input,setInput]= useState([])
+  let result
+
+
+  function handleChange(event){
+    return(result=event.target.value)
+  }
+
+  function handleSubmit(){
+    return setInput([...input,result])
+  }
+
+  const margin={margin:20}
+  
   return(
-    < Card name="Amit"
-    designation= "Graphic Designer"
-    description= "Highly creative and multitalented Graphic Designer with extensive experience in multimedia, marketing, and print design."
- 
-    />
+    <Fragment>
+      <input onChange={handleChange}/>
+      
+      <button style={margin} onClick={handleSubmit}>Add</button>
+      
+      {input.map((number)=>(<p>{number}</p>))}
+      <br/>
+      
+    </Fragment>
+   
 
     
     )
