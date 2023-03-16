@@ -1,70 +1,36 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react'
+import img1 from './images/img1.avif';
+import img2 from './images/img2.avif';
+import img3 from './images/img3.avif';
+import img4 from './images/img4.avif';
+import img5 from './images/img5.avif';
+import img6 from './images/img6.avif';
 
-
+import Task1 from './task1';
 import './App.css'
 
 
+function App() {
 
-function App(){
-  const [input, setInput] = useState([])
-  const [count, setCount] = useState(0)
- 
-  let result 
-  function handleTodo(event){
-    return(
-      result=event.target.value
+  let Img=[img1,img2,img3,img4,img5,img6]
+  const [Count ,setCount] =useState(0)
+  
+
+  function handleChange() {
+    if((Img.length-1)===Count){
+        return setCount(0)
+    }else{
+      return setCount(Count+1)
+    }
+  
+  }
+  return (
+    <>
+    
+      <Task1 handleChange={handleChange} BtnName="Change Image" image={Img[Count]}/>
+    
+    </>
     )
-  }
-
-  
-  function submitTodo(){
-    setCount(count+1)
-      return setInput([...input,result])
-  
-  }
-  
-  
-  function handleDelete(abc){
-    const result=input.filter((num)=>num!==abc)
-    setCount(count-1)
-      return  setInput(result)
-  
-  }
-  const handleComplete = (id) => { 
-    setInput(input => input.map(num => {
-      if (num === id) {
-        return (
-          <span style={{textDecoration:"line-through"}}>
-            {num}  
-          </span>
-        )
-      }
-       else {
-        return num;
-      }
-    }));
-    setCount(count-1)
-  };
-
-  return(
-    <div className='container'>
-        <div className='box'>
-          <h1 >Pending Tasks - {(count)}</h1>
-            <div className='box-inside'>
-              {input.map((num)=>(
-                <p key={num}>{num}
-                  <span>
-                    <button className='btn-cmplte' onClick={() => handleComplete(num)}>Complete</button>
-                    <button className='btn-delete' onClick={() => handleDelete(num)}>Dlt</button>
-                  </span>
-                </p>))}
-            </div>
-          <input onChange={handleTodo}/>
-          <button onClick={submitTodo}>Submit</button>
-        </div>
-    </div>
-  )
 }
 
-
-export default App;
+export default App
