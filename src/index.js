@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import App from './App'
-//import Limit from './textLimit'
-//import LoginForm from './loginForm'
+ import App from './App'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   
-    <App/>
-    {/* <Limit/> */}
-    {/* <LoginForm/> */}
+     <App/>
+   
   </React.StrictMode>
 );
 
