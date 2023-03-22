@@ -1,24 +1,4 @@
-body{
-  padding: 60px;
-
-}
-
-.container{
-  border: 2px  solid brown;
-  display: flex;
-
-}
-.container img{
-  box-shadow: 2px 0px brown;
-  height: 500px;
-  width: 50%;
-}
-.container button{
-  margin: auto;
-  background-color: rgb(165, 135, 190);
-  padding: 20px;
-  border-color: rgb(66, 4, 124);
-  border-radius: 5px;
-  
-  
+.head{
+  text-align: center;
+  color: blueviolet;
 }

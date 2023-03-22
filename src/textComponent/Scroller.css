@@ -1,0 +1,41 @@
+/* body{
+    display: flex;
+    width: 100%;
+} */
+.horizontal-scroller{
+    display:flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width:70%; 
+    height: fit-content;
+    /* height:200px; */
+    margin: 25px;
+    margin-left: 15%;
+}
+
+.horizontal-scroller::-webkit-scrollbar{
+    width: 0;
+}
+ .mentor-profile{
+     display: inline-block;
+    margin-left: 98PX;
+    border: 1px solid red;
+}
+.main{
+    margin: 25px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    background-color: #80808026;
+}
+.main img{
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.main span{
+    color: blue;
+}
