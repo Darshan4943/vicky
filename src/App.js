@@ -1,20 +1,22 @@
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import About from './components/AboutUs'
+import Login from './components/Login'
+import Navbar from './components/Navbar'
+import SignUp from './components/Signup'
+import './style.css'
 
-import Tictactoe from './Component/ticTacToe.js'
-import Scroller from './textComponent/Scroller.js'
-import './App.css'
-function App() {
-
-  
+const App = () => {
   return (
-    <>
-      <h1>problem 1</h1>
-      <Tictactoe/>
-      <h1>Problem 2</h1>
-      <Scroller/>
-      <h2 className='head'>Scroll with left, right arrow key</h2>
-      
-    </>
-    )
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<About/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<SignUp/>} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
