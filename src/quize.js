@@ -52,7 +52,7 @@ const questionsData = [
       correctAnswer: 'Cheetah'
     }
   ];
-const Quiz = () => {
+const Test = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState(
     Array(questionsData.length).fill(null)
@@ -125,4 +125,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default Test;
