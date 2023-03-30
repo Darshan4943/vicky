@@ -1,11 +1,16 @@
 import React from 'react'
-import Test from './quize.js'
+ 
+import Lucky from './component/lucky.js'
+// import Main from './routeComponent/main'
 import './App.css'
 
 
 const App = () => {
   return (
-    <Test/>
+    <>
+       <Lucky/>
+       {/* <Main/> */}
+    </>
   )
 }
 
