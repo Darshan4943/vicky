@@ -1,12 +1,12 @@
 import React from 'react'
 
  import './App.css'
-import Table1 from './table1.js'
+import Table2 from './table2.js'
 const App = () => {
   
   return (
     <div>
-      <Table1/>
+      <Table2/>
     </div>
   )
 }
