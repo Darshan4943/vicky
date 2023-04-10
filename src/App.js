@@ -1,16 +1,13 @@
 import React from 'react'
- 
-import Lucky from './component/lucky.js'
-// import Main from './routeComponent/main'
-import './App.css'
 
-
+ import './App.css'
+import Table1 from './table1.js'
 const App = () => {
+  
   return (
-    <>
-       <Lucky/>
-       {/* <Main/> */}
-    </>
+    <div>
+      <Table1/>
+    </div>
   )
 }
 

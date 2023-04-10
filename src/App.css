@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+}
+table, th, td{
+    margin-left: 520px;
+    margin-top: 50px;
+    border: 1px solid;
+   
+}
