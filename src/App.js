@@ -1,12 +1,12 @@
 import React from 'react'
 
  
-import Table4 from './component1/table4.js'
+import Table5 from './component2/table5.js'
 const App = () => {
   
   return (
     <div>
-      <Table4/>
+      <Table5/>
     </div>
   )
 }
