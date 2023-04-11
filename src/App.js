@@ -1,12 +1,12 @@
 import React from 'react'
 
- import './App.css'
-import Table3 from './table3.js'
+ 
+import Table4 from './component1/table4.js'
 const App = () => {
   
   return (
     <div>
-      <Table3/>
+      <Table4/>
     </div>
   )
 }

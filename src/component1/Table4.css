@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+    background-color: rgb(184, 140, 179);
+}
+table, th, td{
+    
+    margin-left: 220px;
+    margin-top: 50px;
+    border: 2px solid;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: rgb(216, 204, 215);
+}
