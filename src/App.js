@@ -1,12 +1,12 @@
 import React from 'react'
 
  
-import Table5 from './component2/table5.js'
+import Form from './form.js'
 const App = () => {
   
   return (
     <div>
-      <Table5/>
+      <Form/>
     </div>
   )
 }
