@@ -1,12 +1,12 @@
 import React from 'react'
 
  
-import Form from './form.js'
+import Ass7 from './Ass7.js'
 const App = () => {
   
   return (
     <div>
-      <Form/>
+      <Ass7/>
     </div>
   )
 }
