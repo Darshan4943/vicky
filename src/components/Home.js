@@ -1,13 +1,11 @@
-import React from 'react';
-
-
-
-function Home() {
+import React from "react";
+import "./ass8.css";
+const Home = () => {
   return (
-    <div style={{textAlign:"center"}}>
-     <h1>Home Page</h1>
+    <div>
+      <h1> Welcome to Home Page</h1>
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
