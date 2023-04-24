@@ -1,23 +1,19 @@
-import React from "react";
-import Ass8 from "./components/ass8";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import * as React from "react";
+import './App.css'
+import Todo from "./Todo";
+import { Provider } from "react-redux";
+import { store } from "./Store";
+import Count from "./Count";
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<Ass8 />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Provider store={store}>
+      <div>
+        
+        <Todo />
+       
+        <Count />
+      </div>
+    </Provider>
   );
-};
-
-export default App;
+}

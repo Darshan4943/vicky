@@ -1,0 +1,21 @@
+
+.Box{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    border: 2px solid rgb(8, 8, 8);
+    margin-top: 5rem;
+    margin-left: 40rem;
+}
+.Box h1{
+    text-align: center;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
