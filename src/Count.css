@@ -1,21 +1,36 @@
 
-.Box{
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+table {
+    border: 1px solid rgb(0, 0, 0);
    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 500px;
-    border: 2px solid rgb(8, 8, 8);
-    margin-top: 5rem;
-    margin-left: 40rem;
-}
-.Box h1{
+    border-collapse: collapse;
+    width: 8%;
+  }
+  
+  th {
+    border: 1px solid black;
+    
+    text-align: left;
+    padding: 8px;
+    padding: 20px;
+  }
+  h1{
     text-align: center;
-}
-.btns{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-}
+  }
+  td{
+    padding: 20px;
+    
+  }
+  td button {
+    border: 1px solid rgb(6, 5, 5);
+    /* background-color: transparent; */
+    padding: 5px;
+    cursor: pointer;
+   
+    width: 57px;
+  }

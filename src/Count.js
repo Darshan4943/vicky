@@ -1,35 +1,48 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { counterSlice } from "./Store";
+import * as React from "react";
 import "./Count.css";
+import { countSlice } from "./Store";
 
-const Count = () => {
+import { useDispatch, useSelector } from "react-redux";
+export default function Count() {
+
+  const dispatch = useDispatch();
+
   const count = useSelector((state) => {
     return state.count;
   });
 
-  const dispatch = useDispatch();
+  const btns = useSelector((state) => {
+    return state.btns;
+  });
 
-  function handleInc() {
-    dispatch(counterSlice.actions.Increment());
-  }
-  function handleDec() {
-    dispatch(counterSlice.actions.Decrement());
-  }
-  function handleReset() {
-    dispatch(counterSlice.actions.Reset());
+  function handleClick(index) {
+    dispatch(countSlice.actions.incCount(index));
   }
   return (
-    <div className="Box">
-      <h1>Counter Application</h1>
-      <h1>Count :- {count}</h1>
-      <div className="btns">
-        <button onClick={handleInc}>Increment</button>
-        <button onClick={handleDec}>Decrement</button>
-        <button onClick={handleReset}>Reset</button>
-      </div>
+    <div>
+      <h1>Counts</h1>
+      <table>
+        <thead>
+          <th>Buttons</th>
+          <th>Click-Counts</th>
+        </thead>
+        {count.map((count, index) => (
+          <tr>
+            <td>
+              <button
+                onClick={() => {
+                  handleClick(index);
+                }}
+              >
+                {btns[index]}
+              </button>
+            </td>
+            <strong>
+              <td>{count}</td>
+            </strong>
+          </tr>
+        ))}
+      </table>
     </div>
   );
-};
-
-export default Count;
+}
