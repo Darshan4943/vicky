@@ -1,0 +1,17 @@
+.main{
+    margin-left: 40rem;
+    margin-top: 5rem;
+    
+}
+.main input{
+    width: 20%;
+    padding: 1rem;
+}
+.main button{
+    width:15%;
+    margin-left: 1rem;
+    padding: 0.8rem;
+}
+.button{
+    background-color: green;
+}
