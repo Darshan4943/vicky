@@ -1,14 +1,34 @@
 import * as React from "react";
-import { Provider } from "react-redux";
-import { store } from "./Store";
-import Count from "./Count";
+import Select from "react-select"
+
 
 export default function App() {
+
+    const [value,setValue]=React.useState(null)
+  const options=[
+    {value:"CHOCOLATE",label:"Chocolate"},
+    {value:"CANDY",label:"Candy"},
+    {value:"ICE-CREAME",label:"Ice Cream"},
+    {value:"BURGER",label:"Burger"}
+    
+  ]
   return (
-    <Provider store={store}>
-      <div>
-        <Count />
-      </div>
-    </Provider>
+    <div style={{margin:20,width:200}}>
+       <Select 
+       options={options} 
+       defaultValue={value} 
+       placeholder="Select your Snack" 
+       onChange={setValue} 
+       isMulti
+       isSearchable
+       noOptionsMessage={()=>"No Snacks Found"}
+      
+       styles={{
+        clearIndicator:()=>({
+          color:"red"
+        })
+       }}
+       />
+    </div>
   );
 }
