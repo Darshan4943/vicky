@@ -1,12 +1,22 @@
-import React from "react";
+// import React from "react";
 import { useRecoilState } from "recoil";
 import { datas, scores } from "./Atom";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+
 import styles from "./User.module.css";
+import { useEffect, useState } from "react";
 
 const User = () => {
   const [data, setData] = useRecoilState(datas);
+  const [user, setuser] = useState();
+  useEffect(() => {
+    if (localStorage.getItem("question")) {
+      setData(JSON.parse(localStorage.getItem("question")));
+    }
+    if (localStorage.getItem("loggedStudent")) {
+      setuser(localStorage.getItem("loggedStudent"));
+    }
+  }, []);
   const [score, setscore] = useRecoilState(scores);
   const navigate = useNavigate();
   function handleSelect(e, index) {
@@ -16,6 +26,15 @@ const User = () => {
     }
   }
 
+  function handleSubmit() {
+    let obj = {
+      name: user,
+      score: score,
+    };
+    localStorage.setItem("userScore", JSON.stringify(obj));
+    alert("successfully submitted");
+    navigate("/");
+  }
   return (
     <div className={styles.container}>
       {data.map((data, index) => (
@@ -23,6 +42,13 @@ const User = () => {
           <h3>
             {index + 1}. {data.question}
           </h3>
+          {data.imageque && (
+            <img
+              src={data.imageque}
+              alt="images"
+              style={{ height: "200px", width: "200px" }}
+            />
+          )}
           <div className={styles.options}>
             <label>
               <input
@@ -63,9 +89,11 @@ const User = () => {
           </div>
         </div>
       ))}
-      <Link to="/score">
-        <button className={styles.submitButton}>Submit</button>
-      </Link>
+
+      <button onClick={handleSubmit} className={styles.submitButton}>
+        Submit
+      </button>
+      {/* </Link> */}
     </div>
   );
 };

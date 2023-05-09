@@ -1,5 +1,8 @@
 import { atom } from "recoil";
 
+// const [number, setNumber] = useState(1);
+//   const [data, setData] = useState([]);
+//   const [score, setscore] = useState(0)
 
 export const numbers = atom({
   key: "numbers",
