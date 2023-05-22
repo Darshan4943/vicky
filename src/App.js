@@ -1,18 +1,21 @@
-import React from "react";
-
-import { Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import  from "react-router-dom";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Task from "./components/Task";
+import Navbar from "./Navbar";
 
 const App = () => {
   return (
     <div>
-      <h1>Who are you?</h1>
-      <Link to="/adminLogin">
-        <button>Admin</button>
-      </Link>
-      <Link to="/studentLogin">
-        <button>Student</button>
-      </Link>
-      {/* <button>Student</button> */}
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/task" element={<Task />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
